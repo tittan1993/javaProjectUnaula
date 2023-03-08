@@ -1,7 +1,7 @@
-import classOperation.factorial;
-import classOperation.fibonacci;
-import classOperation.recursion;
+import classOperation.*;
 
+
+// trabajo presentado por Alejandro gil, johan arias, harold arboleda
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +18,12 @@ public class Main {
 
         while(!salir){
 
-            System.out.println("\n 1.Factorial");
+            System.out.println("\n 1. Factorial");
             System.out.println(" 2. Recursividad descendente");
             System.out.println(" 3. Fibonacci");
-            System.out.println(" 4. Salir");
+            System.out.println(" 4. arboles en preorden");
+            System.out.println(" 5. arboles en inorden");
+            System.out.println(" 6. salir");
 
             System.out.println("Escribe una de las opciones");
             opcion = sn.nextInt();
@@ -44,10 +46,22 @@ public class Main {
                     }
                     break;
                 case 4:
+                    postordeTrees getTrees = new postordeTrees();
+                    getTrees.main();
+                    System.out.write('\n');
+                    break;
+
+                case 5:
+                    inorderTrees getTreesInorder = new inorderTrees();
+                    getTreesInorder.main();
+                    System.out.write('\n');
+                    break;
+
+                case 6:
                     salir=true;
                     break;
                 default:
-                    System.out.println("Solo números entre 1 y 4");
+                    System.out.println("Solo números entre 1 y 5");
             }
 
         }
