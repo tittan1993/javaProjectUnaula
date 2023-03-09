@@ -11,7 +11,7 @@ class TreeNode {
         this.val = val;
     }
 }
-public class postordeTrees {
+public class preOrderTrees {
     public static void main() {
         Scanner sc = new Scanner(System.in);
         TreeNode root = buildTree(sc);

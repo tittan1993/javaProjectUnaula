@@ -21,9 +21,10 @@ public class Main {
             System.out.println("\n 1. Factorial");
             System.out.println(" 2. Recursividad descendente");
             System.out.println(" 3. Fibonacci");
-            System.out.println(" 4. arboles en preorden");
-            System.out.println(" 5. arboles en inorden");
-            System.out.println(" 6. salir");
+            System.out.println(" 4. arboles en PreOrden");
+            System.out.println(" 5. arboles en inOrden");
+            System.out.println(" 6. arboles en PosOrden");
+            System.out.println(" 7. salir");
 
             System.out.println("Escribe una de las opciones");
             opcion = sn.nextInt();
@@ -46,7 +47,7 @@ public class Main {
                     }
                     break;
                 case 4:
-                    postordeTrees getTrees = new postordeTrees();
+                    preOrderTrees getTrees = new preOrderTrees();
                     getTrees.main();
                     System.out.write('\n');
                     break;
@@ -58,10 +59,16 @@ public class Main {
                     break;
 
                 case 6:
+                    posOrderTrees getTreesPreorden = new posOrderTrees();
+                    getTreesPreorden.main();
+                    System.out.write('\n');
+                    break;
+
+                case 7:
                     salir=true;
                     break;
                 default:
-                    System.out.println("Solo números entre 1 y 5");
+                    System.out.println("Solo números entre 1 y 7");
             }
 
         }
